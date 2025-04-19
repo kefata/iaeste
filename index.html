@@ -4,7 +4,9 @@
    <style>
     body {
       background-color: #e0f7f7;
+      display: flex; /* 横並びにするためにFlexboxを再適用 */
       padding-left: 20px;
+      flex-direction: row; /* デフォルトで横並びになるように指定 */
     }
     .left-column {
       width: 200px; /* 左側のリストの幅 */
@@ -13,7 +15,8 @@
     }
     .right-column {
       flex-grow: 1; /* 右側は残りのスペースを占める */
-      padding-left: 30px; /* 右側の文章の開始位置を少し右に */
+      margin-right: 20px; /* 右側の文章に余白を追加 */
+      margin-left: 20px; /* 右側の文章に余白を追加 */
     }
     ul {
       list-style-type: none; /* リストのマーカーを消す */
@@ -21,9 +24,6 @@
     }
     li {
       margin: 10px 0;
-    }
-     .right-column p {
-      margin-right: 20px; /* 右寄りの文章の右側に余白を追加 */
     }
   </style>
 </head>
