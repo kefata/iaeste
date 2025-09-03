@@ -1,65 +1,111 @@
 <html>
 <head>
- <title>スコットランドの大学で見られたケルトの文化について</title>
-   <style>
+  <title>ケルト音楽ページ</title>
+  <style>
     body {
-      background-color: #e0f7f7;
-      display: flex; /* 横並びにするためにFlexboxを再適用 */
-      padding-left: 20px;
-      flex-direction: row; /* デフォルトで横並びになるように指定 */
+      background-color: #fdf6e3;
+      font-family: sans-serif;
+      padding: 20px;
+      margin: 0;
     }
-    .left-column {
-      width: 200px; /* 左側のリストの幅 */
-      padding-right: 20px;
-      margin-top: 94px; /* 右側のタイトルより下に表示 */
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
     }
-    .right-column {
-      flex-grow: 1; /* 右側は残りのスペースを占める */
-      margin-right: 20px; /* 右側の文章に余白を追加 */
-      margin-left: 20px; /* 右側の文章に余白を追加 */
+
+    /* 曲カードを2列で並べる */
+    .song-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
     }
-    ul {
-      list-style-type: none; /* リストのマーカーを消す */
-      padding: 0;
+
+    /* 各曲のボックス */
+    .song-item {
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease;
     }
-    li {
-      margin: 10px 0;
+
+    .song-item:hover {
+      transform: scale(1.02);
+    }
+
+    /* 曲タイトルリンク */
+    .song-title a {
+      font-weight: bold;
+      font-size: 18px;
+      color: #0077cc;
+      text-decoration: none;
+    }
+
+    .song-title a:hover {
+      text-decoration: underline;
+    }
+
+    .song-desc {
+      font-size: 14px;
+      color: #555;
+      margin-top: 5px;
+    }
+
+    /* スマホ対応 */
+    @media (max-width: 600px) {
+      .song-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* 戻るリンク */
+    .back-link {
+      display: block;
+      margin-top: 30px;
+      text-align: center;
+      text-decoration: none;
+      color: #0077cc;
     }
   </style>
 </head>
-  <div class="left-column">
-    <!-- 左側にリストを作成 -->
-    <ul>
-      <li><a href="index.html">ホーム</a></li>
-      <li><a href="music.html">ケルト音楽ページ</a></li>
-      <li><a href="link.html">リンク </a></li>
-      <li><a href="#link4">研修報告書</a></li>
-    </ul>
-  </div>
+<body>
+  <h1>ケルト音楽の曲リスト</h1>
 
-  <div class="right-column">
-    <header>
-      <h2 style="text-align: center; font-size: 26px; margin-bottom: 5px;">スコットランドでのケルト音楽の活動記録</h2>
-      <p style="text-align: right; font-size: 14px; color: #555; margin-right: 10px;">2025.04.19</p>
-    </header>
-
-    <div class="top-wrapper">
-      <div class="container">
-        <p>スコットランドのある街でのケルト音楽の活動の記録を残していきます。<br>
-          所属して大学のサークルでの活動や街のセッションでの曲目等をご紹介します。。<br>
-          IAESTE以外の留学や大学生活のことなどでも構いません。お待ちしています。</p>
-        
-        <a href="https://www.mn.uio.no/fysikk/english/research/groups/nuclear/">オスロ大学原子核研究室ホームページ </a> <br><br>
-        <a href="https://drive.google.com/file/d/1aDoGsx8BpMfV4-htW38E9ExAi3-5MC2U/view?usp=sharing">本日の研修報告のパワーポイントファイル</a> <br><br>
-        <a href="https://www.youtube.com/watch?v=gGi7VZMiLLI">オーロラを見た時の現地での話(Youtube)</a> <br><br>
-        <a href="https://drive.google.com/open?id=1PVx3PAwVjJKrfp0bn4kDuIzjPGg-zns1">研修後に提出した当時の研修報告書</a> <br><br>
-        <p>メールアドレス: hirotakefu@gmail.com</p>
-        <p>facebook: hirotake furihata</p>
-        <p>所属: 東京大学農学生命科学研究科応用生命化学専攻</p>
+  <div class="song-grid">
+    <div class="song-item">
+      <div class="song-title">
+        <a href="https://www.youtube.com/watch?v=example1" target="_blank">The Butterfly</a>
       </div>
+      <div class="song-desc">アイリッシュの有名なスリップジグ。ゆったりしたリズムが特徴。</div>
     </div>
+
+    <div class="song-item">
+      <div class="song-title">
+        <a href="https://thesession.org/tunes/si-bheag-si-mhor" target="_blank">Si Bheag, Si Mhor</a>
+      </div>
+      <div class="song-desc">オキャロラン作曲の名曲。しっとりとした雰囲気。</div>
+    </div>
+
+    <div class="song-item">
+      <div class="song-title">
+        <a href="https://www.youtube.com/watch?v=example2" target="_blank">Morrison's Jig</a>
+      </div>
+      <div class="song-desc">明るく軽快なジグ。初心者にも人気。</div>
+    </div>
+
+    <div class="song-item">
+      <div class="song-title">
+        <a href="https://www.youtube.com/watch?v=example3" target="_blank">Cooley's Reel</a>
+      </div>
+      <div class="song-desc">セッションでよく演奏される定番のリール。</div>
+    </div>
+
+    <!-- 曲をどんどん追加可能 -->
   </div>
 
+  <a class="back-link" href="index.html">← ホームに戻る</a>
 </body>
 </html>
+
 
