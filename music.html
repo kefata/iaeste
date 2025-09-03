@@ -1,13 +1,108 @@
 <html>
 <head>
- <title>ケルト音楽ページ</title>
- <style>
-  body { background-color: #fdf6e3; font-family: sans-serif; }
- </style>
+  <title>ケルト音楽ページ</title>
+  <style>
+    body {
+      background-color: #fdf6e3;
+      font-family: sans-serif;
+      padding: 20px;
+      margin: 0;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    /* 曲カードを2列で並べる */
+    .song-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    /* 各曲のボックス */
+    .song-item {
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .song-item:hover {
+      transform: scale(1.02);
+    }
+
+    .song-title {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    .song-desc {
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* レスポンシブ対応: スマホでは1列 */
+    @media (max-width: 600px) {
+      .song-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* 戻るリンク */
+    .back-link {
+      display: block;
+      margin-top: 30px;
+      text-align: center;
+      text-decoration: none;
+      color: #0077cc;
+    }
+  </style>
 </head>
 <body>
-  <h1>ケルト音楽について</h1>
-  <p>セッションで演奏した曲や活動内容を記録します。</p>
-  <a href="index.html">← ホームに戻る</a>
+  <h1>ケルト音楽の曲リスト</h1>
+
+  <div class="song-grid">
+    <div class="song-item">
+      <div class="song-title">The Butterfly</div>
+      <div class="song-desc">アイリッシュの有名なスリップジグ。ゆったりしたリズムが特徴。</div>
+    </div>
+    <div class="song-item">
+      <div class="song-title">Si Bheag, Si Mhor</div>
+      <div class="song-desc">オキャロラン作曲の名曲。しっとりとした雰囲気。</div>
+    </div>
+    <div class="song-item">
+      <div class="song-title">Morrison's Jig</div>
+      <div class="song-desc">明るく軽快なジグ。初心者にも人気。</div>
+    </div>
+    <div class="song-item">
+      <div class="song-title">Cooley's Reel</div>
+      <div class="song-desc">セッションでよく演奏される定番のリール。</div>
+    </div>
+    <div class="song-item">
+      <div class="song-title">The Kesh Jig</div>
+      <div class="song-desc">アイリッシュセッションの定番。演奏しやすい。</div>
+    </div>
+    <div class="song-item">
+      <div class="song-title">Planxty Irwin</div>
+      <div class="song-desc">落ち着いた雰囲気のハープ曲。</div>
+    </div>
+    <div class="song-item">
+      <div class="song-title">Drowsy Maggie</div>
+      <div class="song-desc">速いテンポのリールで、盛り上がりに最適。</div>
+    </div>
+    <div class="song-item">
+      <div class="song-title">The Rights of Man</div>
+      <div class="song-desc">明るいホーンパイプ。人気の高い曲。</div>
+    </div>
+    <!-- 曲をどんどん追加可能 -->
+  </div>
+
+  <a class="back-link" href="index.html">← ホームに戻る</a>
 </body>
 </html>
+
