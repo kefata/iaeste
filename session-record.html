@@ -2,98 +2,110 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8">
-  <title>セッション音源ページ</title>
+  <title>ケルト音源集</title>
+  <style>
+    body {
+      font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+      background-color: #c8e6c9; /* 濃いめの緑系 */
+      color: #222;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* 音符背景を敷き詰めるイメージ */
+    body::before {
+      content: "♪ ♫ ♩ ♬ ";
+      font-size: 2rem;
+      color: rgba(255,255,255,0.2);
+      white-space: pre;
+      line-height: 2;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+      background-image: repeating-linear-gradient(
+        45deg,
+        transparent 0px,
+        transparent 80px,
+        rgba(255,255,255,0.1) 80px,
+        rgba(255,255,255,0.1) 160px
+      );
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem;
+      background: linear-gradient(to right, #81c784, #a5d6a7);
+      border-bottom: 2px solid #4caf50;
+      position: relative;
+      z-index: 1;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+      color: #1b5e20;
+      text-shadow: 1px 1px 2px #fff;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .track {
+      background: #ffffffdd;
+      border: 1px solid #a5d6a7;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+      transition: background 0.2s;
+    }
+
+    .track:hover {
+      background: #f1f8f6;
+    }
+
+    .track a {
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #2e7d32;
+      display: block;
+      word-wrap: break-word; /* 長いタイトルも折り返し表示 */
+    }
+  </style>
 </head>
 <body>
-  <h1>セッション音源ダウンロードページ</h1>
-  <p>以下のリンクから音源をダウンロードできます。セッション音源はDundee, St.andrewsのパブ等でのセッションが中心です。</p>
-  <p>曲覚えや個人の鑑賞のために個人でダウンロードすることを目的としています(現地での録音もその認識です)。それ以外の用途には使用しないでください。</p>
+  <header>
+    <h1>ケルト音源ページ</h1>
+  </header>
 
-  <ul>
-    <li>
-      <a href="music/2025-03-25 The mouth of the Tobique - Dinkey's - Big John MacNeill - Miss Shepherd - Calgary Fiddlers Welcome to Shetland.m4a" download>🎵 The mouth of the Tobique - Dinkey's - Big John MacNeill - Miss Shepherd - Calgary Fiddlers Welcome to Shetland</a>
-    </li>
-    <li>
-      <a href="music/2024-10-01 Frank's - The Mouth of the Tobique - Calgary Fiddlers Welcome to shetland - High road to Linton - Big John MacNeill - High Drive.m4a" download>🎵 Frank's - The Mouth of the Tobique - Calgary Fiddlers Welcome to shetland - High road to Linton - Big John MacNeill - High Drive</a>
-    </li>
-    <li>
-      <a href="music/2025-02-25 Da Tushkar - Mickie Ainsworth - Miss Susan Cooper - The Sandyburn.m4a" download>🎵 Da Tushkar - Mickie Ainsworth - Miss Susan Cooper - The Sandyburn</a>
-    </li>
-    <li>
-      <a href="music/2025-02-25 Far from home - Fairy Dance - Saint Anne's - Spootiskerry.m4a" download>🎵 Far from home - Fairy Dance - Saint Anne's - Spootiskerry</a>
-    </li>  
-    <li>
-      <a href="music/2025-04-15 The Holm Band Tune - Skeldaquoy Point - Miss Sarah McFadyen - Fairwell to Rock O'cleary.m4a" download>🎵 The Holm Band Tune - Skeldaquoy Point - Miss Sarah McFadyen - Fairwell to Rock O'cleary</a>
-    </li>  
-    <li>
-      <a href="music/2025-04-15 Tongadale - Pat the Budgie - Andy Renwick's Ferret - Stomach Steinway Man - Miss Shepherd - The Foxhunter's - Hjerdafeld - The high drive.m4a" download>🎵 Tongadale - Pat the Budgie - Andy Renwick's Ferret - Stomach Steinway Man - Miss Shepherd - The Foxhunter's - Hjerdafeld - The high drive</a>
-    </li>  
-    <li>
-      <a href="music/2025-04-22 The Sliver Spear - Sleep Soond in Da Morning - Pressed For Time.m4a" download>🎵 The Sliver Spear - Sleep Soond in Da Morning - Pressed For Time</a>
-    </li>  
-    <li>
-      <a href="music/2025-04-29 - Donald Blue - Sleep Sound Ida Mornin' - Lasses Trust In Providence - The Bonnie Isle O' Whalsey.m4a" download>🎵 - Donald Blue - Sleep Sound Ida Mornin' - Lasses Trust In Providence - The Bonnie Isle O' Whalsey</a>
-    </li>  
-    <li>
-      <a href="music/2025-05-06 Compliments to Sean Maguire - Pat the Budgie - Robertosons of Raga - Compliments to Hugh Hughson of Newcastle - The Cape Breton Fiddler's Society's Welcome To The Shetland Island.m4a" download>🎵 Compliments to Sean Maguire - Pat the Budgie - Robertosons of Raga - Compliments to Hugh Hughson of Newcastle - The Cape Breton Fiddler's Society's Welcome To The Shetland Island</a>
-    </li>  
-    <li>
-      <a href="music/2025-05-18 The Lark In The Morning (Dmaj) - Out on the Ocean - The Lisnagun (Dmaj) - Kenny Gilles of Portnalong (Amaj) - Humorous of tulla(Dmaj) - The Silver Spire(Dmaj) - Hurlock's.m4a" download>🎵 The Lark In The Morning (Dmaj) - Out on the Ocean - The Lisnagun (Dmaj) - Kenny Gilles of Portnalong (Amaj) - Humorous of tulla(Dmaj) - The Silver Spire(Dmaj) - Hurlock's</a>
-    </li>  
-    <li>
-      <a href="music/2025-05-27 The Road to Banff - The Stool of Repentance - Soup Dragon.m4a" download>🎵 The Road to Banff - The Stool of Repentance - Soup Dragon</a>
-    </li>  
-    <li>
-      <a href="music/2025-06-28 The Cup Of Tea(Gmaj) - Drowsy Maggie(Gmaj) - Sleep Sppnd Ila Mornin'(Gmaj).m4a" download>🎵 The Cup Of Tea(Gmaj) - Drowsy Maggie(Gmaj) - Sleep Sppnd Ila Mornin'(Gmaj)</a>
-    </li>  
-    <li>
-      <a href="" download>🎵</a>
-    </li>  
-    <li>
-      <a href="" download>🎵</a>
-    </li>  
-    <li>
-      <a href="" download>🎵</a>
-    </li>  
-    <li>
-      <a href="" download>🎵</a>
-    </li>  
-    <li>
-      <a href="" download>🎵</a>
-    </li>  
-    <li>
-      <a href="" download>🎵</a>
-    </li>  
-    <li>
-      <a href="" download>🎵</a>
-    </li>  
-    <li>
-      <a href="" download>🎵</a>
-    </li>  
-    <li>
-      <a href="" download>🎵</a>
-    </li>  
-    <li>
-      <a href="" download>🎵</a>
-    </li>  
-    <li>
-      <a href="" download>🎵</a>
-    </li>  
-    <li>
-      <a href="" download>🎵</a>
-    </li>  
-    <li>
-      <a href="" download>🎵</a>
-    </li>  
-    <li>
-      <a href="" download>🎵</a>
-    </li>  
-      
-  </ul>
+  <main>
+    <div class="track">
+      <a href="music/song1.mp3" download>🎵 The Long Journey of Celtic Spirits (MP3)</a>
+    </div>
 
-  <p>※ Safariなどブラウザによっては自動で再生される場合があります。その場合は右クリックして「名前を付けて保存」を選んでください。</p>
+    <div class="track">
+      <a href="music/song2.mp3" download>🎶 Highland Dance under the Moonlight (MP3)</a>
+    </div>
 
-  
-  <a class="back-link" href="index.html">← ホームに戻る</a>
+    <div class="track">
+      <a href="music/song3.mp3" download>🎵 Echoes of the Ancient Harp (MP3)</a>
+    </div>
+
+    <div class="track">
+      <a href="music/song4.mp3" download>🎶 Gathering at the Green Fields of Ireland (MP3)</a>
+    </div>
+  </main>
 </body>
 </html>
